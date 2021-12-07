@@ -22,5 +22,12 @@ private Button btn_pendapatan,btn_prediksi;
                 startActivity(new Intent(MainActivity.this,PendapatanHariIniActivity.class));
             }
         });
+
+        btn_prediksi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,PrediksiActivity.class));
+            }
+        });
     }
 }

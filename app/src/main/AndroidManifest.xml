@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".PrediksiActivity"
+            android:exported="false" />
+        <activity
             android:name=".PendapatanHariIniActivity"
             android:exported="false" />
         <activity

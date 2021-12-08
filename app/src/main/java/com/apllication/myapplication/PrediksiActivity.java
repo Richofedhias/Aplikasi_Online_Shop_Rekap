@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PrediksiActivity extends AppCompatActivity {
     private EditText editTextNumber;
@@ -31,8 +32,9 @@ public class PrediksiActivity extends AppCompatActivity {
         buttonPredict.setOnClickListener(e -> {
             float number = Float.parseFloat(editTextNumber.getText().toString());
             int hari = Integer.parseInt(editTextNumber.getText().toString());
-            int result[] = tfSimpleRegression.predict(new int[]{hari});
-            textViewResult.setText("Prediksi Hari ke " + hari + "\n Rp." + result[0] + "Juta");
+            float result[] = tfSimpleRegression.predict(new float[]{hari});
+            int a = (int) result[0];
+            textViewResult.setText("Prediksi Hari ke " + hari + "\n Rp." + a + " Juta");
         });
     }
 }

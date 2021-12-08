@@ -22,8 +22,8 @@ public class TFSimpleRegression {
         inferenceInterface = new TensorFlowInferenceInterface(context.getAssets(), MODEL_FILE);
     }
 
-    public float[] predict(float[] data) {
-        float[] result = new float[OUTPUT_SIZE];
+    public int[] predict(int[] data) {
+        int[] result = new int[OUTPUT_SIZE];
         inferenceInterface.feed(INPUT_NODE, data, INPUT_SIZE);
         inferenceInterface.run(OUTPUT_NODES);
         inferenceInterface.fetch(OUTPUT_NODE, result);

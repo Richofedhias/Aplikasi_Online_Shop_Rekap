@@ -30,9 +30,9 @@ public class PrediksiActivity extends AppCompatActivity {
     private void setButtonPredictListener(){
         buttonPredict.setOnClickListener(e -> {
             float number = Float.parseFloat(editTextNumber.getText().toString());
-            float result[] = tfSimpleRegression.predict(new float[]{number});
             int hari = Integer.parseInt(editTextNumber.getText().toString());
-            textViewResult.setText("Prediksi Hari ke " + hari + "\n Rp." + result[0] + "");
+            int result[] = tfSimpleRegression.predict(new int[]{hari});
+            textViewResult.setText("Prediksi Hari ke " + hari + "\n Rp." + result[0] + "Juta");
         });
     }
 }

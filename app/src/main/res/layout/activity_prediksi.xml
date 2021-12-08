@@ -14,7 +14,6 @@
         android:textAlignment="center"
         android:inputType="number"
         android:hint="Masukan Hari ke - "
-        android:maxLength="2"
         android:imeOptions="actionDone"
         android:layout_marginTop="300dp"
         android:gravity="center_horizontal" />
